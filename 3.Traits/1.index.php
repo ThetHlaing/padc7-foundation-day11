@@ -5,9 +5,25 @@ class BaseClass
     public function Hello()
     {
 
-        echo 'Mcn ';
+        echo 'Hello ';
     }
 }
+
+
+
+class ChildClass extends BaseClass
+{
+
+    use AdditionalClass;
+}
+
+class ChildClassB extends BaseClass
+{
+
+    //use AdditionalClass;
+}
+
+
 
 trait AdditionalClass
 {
@@ -19,18 +35,14 @@ trait AdditionalClass
 
         echo 'Solution!';
     }
+
+    public function myName(){
+        echo "thisis my name";
+    }
 }
 
 
 
-class CompName extends BaseClass
-{
+$obj = new ChildClass();
 
-    use OtherCls;
-}
-
-
-
-$obj = new CompName();
-
-$obj->Hello();
+$obj->myName();

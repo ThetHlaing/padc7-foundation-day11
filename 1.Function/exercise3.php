@@ -3,14 +3,14 @@
 //Create a function to check if the string is uppercase
 //Function should only accept string as input and return boolean
 
-function isUppercase()
+function isUppercase(string $value) : bool
 {
-
+    return $value == strtoupper($value);
 }
 
 
 
 
-echo isUppercase('String'); //false;
-echo isUppercase('UPPERCASE'); //true;
+var_dump(isUppercase('String')); //false;
+var_dump(isUppercase('UPPERCASE')); //true;
 

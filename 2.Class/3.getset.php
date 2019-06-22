@@ -19,5 +19,5 @@ class Person
 }
 
 $james = new Person();
-$james->name = "Jame";
-echo $james->name;
+$james->setName("Jame");
+echo $james->getName();

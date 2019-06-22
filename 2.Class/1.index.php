@@ -8,6 +8,8 @@ class MyClass
     }
 }
 
-$userclass = new MyClass;
+$userclass = new MyClass();
 
-$userclass->$variable;
+$userclass2 = new MyClass();
+
+//$userclass->$variable;

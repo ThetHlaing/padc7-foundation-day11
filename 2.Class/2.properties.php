@@ -3,11 +3,11 @@
 class Person
 {
 
-    private $name;
+    private $name = 'testing';
 
     private $title;
 
-    public function __construct($name,$title)
+    public function __construct($name = "Jane Doe",$title = "MR")
     {
         $this->name = $name;
         $this->title = $title;
@@ -15,11 +15,20 @@ class Person
 
     public function display()
     {
-        echo $this->title . ' '. $this->name;
+        
+        echo self::hello() . $this->title . ' '. $this->name;
+    }
+
+    public static function hello(){
+        return 'Hello ';
     }
 }
 
 
 $james = new Person("James","Mr");
 
+$jd = new Person();
+
 $james->display();
+
+$jd->display();
